@@ -20,12 +20,24 @@ We can receive address from the user and transfer to weather data of that addres
    1. forward geocoding - convert from address to lat/long
    2. reverse geocoding - convert from lat/long to address
 
-## Object destructuring
-reduce code and make it easier to code.
+## Web Server with Express
+Express is a web framework for Node.js, make it easy to create web server. 
+- Third party libraries
+  - app.get() - send get request
+  - res.send() - show HTML element or JSON on the webpage
+  - app.listen() - open web server and listen on defined port 
+- Built-in core node.js
+  - Path
+    - __dirname - get directory path (absolute path)
+    - __filename - get file path (absolute path) 
+    - path - you can use path in node.js to manage file path
 
-## Dependencies
-- postman-request
 
-## Tools
+### Dependencies
+- postman-request - help node.js send HTTP request
+- express - create RESTful API and web server
+- nodemon - make web server no need to restart when update code.
+
+### Tools
 - weatherstack API
 - mapbox API
