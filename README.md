@@ -23,21 +23,37 @@ We can receive address from the user and transfer to weather data of that addres
 ## Web Server with Express
 Express is a web framework for Node.js, make it easy to create web server. 
 - Third party libraries
-  - app.get() - send get request
-  - res.send() - show HTML element or JSON on the webpage
-  - app.listen() - open web server and listen on defined port 
+  - express
+    - app.get() - send get request
+    - res.send() - show HTML element or JSON on the webpage
+    - app.listen() - open web server and listen on defined port 
+    - app.use(express.static(PATH)) - use the static file in the defined path such as index.html or css files
 - Built-in core node.js
   - Path
     - __dirname - get directory path (absolute path)
     - __filename - get file path (absolute path) 
     - path - you can use path in node.js to manage file path
 
+## Dynamic page with templating
+if you would like to create a template for pages, you can use handlebars third-party packages. However, handlebars cannot use with express. So, we have an another package that can apply handlebars in express called "hbs"
+- handlebars - create templating language
+- hbs - integrate handlebars to express
 
-### Dependencies
+### The process of how to create dynamic page
+- create views folder and create index.hbs file
+- `app.set('view engine', 'hbs');` in app.js
+- you can delete the index.html in public folder
+- use app.get() and res.render() to send dynamic data to the html files 
+- then, in index.hbs file, you can use {{DATA}} to display data as a prop from app.js
+
+Tips: you can delete the html files in public folder and create new html files in views folder like index.html -> index.hbs.
+
+## Dependencies
 - postman-request - help node.js send HTTP request
 - express - create RESTful API and web server
 - nodemon - make web server no need to restart when update code.
+- hbs - integrate handlebars to express 
 
-### Tools
+## Tools
 - weatherstack API
 - mapbox API
