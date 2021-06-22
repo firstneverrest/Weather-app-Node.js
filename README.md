@@ -20,4 +20,12 @@ We can receive address from the user and transfer to weather data of that addres
    1. forward geocoding - convert from address to lat/long
    2. reverse geocoding - convert from lat/long to address
 
-## 
+## Object destructuring
+reduce code and make it easier to code.
+
+## Dependencies
+- postman-request
+
+## Tools
+- weatherstack API
+- mapbox API

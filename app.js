@@ -1,33 +1,22 @@
-const request = require("postman-request");
 const geocode = require("./utils/geocode");
+const weatherForecast = require("./utils/weatherForecast");
 
-// const weatherUrl =
-//   "http://api.weatherstack.com/current?access_key=598ef13bdf9cb2d66807269ddcab0a4b&query=37.8267,-122.4233";
+// receive the address from user input
+const address = process.argv[2];
 
-// request({ url: weatherUrl, json: true }, (error, response) => {
-//   if (error) {
-//     console.log("weatherstack: Unable to connect to weather service!");
-//   } else if (error.body.error) {
-//     console.log("weatherstack: Unable to find location. Try another location.");
-//   } else {
-//     console.log(
-//       response.body.current.weather_descriptions[0] +
-//         ". It is currently " +
-//         response.body.current.temperature +
-//         " degrees out." +
-//         " It feels like " +
-//         response.body.current.feelslike +
-//         " degrees out."
-//     );
-//   }
-// });
-
-weather(37.8267, -122.4233, (error, data) => {
-  console.log("Error", error);
-  console.log("Data", data);
-});
-
-// geocode("Philadelphia", (error, data) => {
-//   console.log("Error", error);
-//   console.log("Data", data);
-// });
+if (!address) {
+  console.log("Please provide an address");
+} else {
+  geocode(address, (error, { latitude, longitude, location } = {}) => {
+    if (error) {
+      return console.log("Geocode Error: " + error);
+    }
+    weatherForecast(latitude, longitude, (error, forecastData) => {
+      if (error) {
+        return console.log("WeatherForecast Error: " + error);
+      }
+      console.log(location);
+      console.log(forecastData);
+    });
+  });
+}
