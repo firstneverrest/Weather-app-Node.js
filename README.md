@@ -38,6 +38,7 @@ Express is a web framework for Node.js, make it easy to create web server.
 if you would like to create a template for pages, you can use handlebars third-party packages. However, handlebars cannot use with express. So, we have an another package that can apply handlebars in express called "hbs"
 - handlebars - create templating language
 - hbs - integrate handlebars to express
+you can also change the name of the views folder to your desired name, can use path.join to point your new views folder location.
 
 ### The process of how to create dynamic page
 - create views folder and create index.hbs file
@@ -47,6 +48,11 @@ if you would like to create a template for pages, you can use handlebars third-p
 - then, in index.hbs file, you can use {{DATA}} to display data as a prop from app.js
 
 Tips: you can delete the html files in public folder and create new html files in views folder like index.html -> index.hbs.
+
+## Put header and footer in template
+create partial folder and use `hbs.registerPartial(partialsPath);` to set as a partial template. In the partial folder, create header.hbs or other name and include {{>header}} in hbs file to use partial template.
+
+Tip: add -e js,hbs after nodemon command to make nodemon restart when hbs change like js file.
 
 ## Dependencies
 - postman-request - help node.js send HTTP request
