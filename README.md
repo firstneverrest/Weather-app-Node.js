@@ -54,6 +54,14 @@ create partial folder and use `hbs.registerPartial(partialsPath);` to set as a p
 
 Tip: add -e js,hbs after nodemon command to make nodemon restart when hbs change like js file.
 
+## 404 page
+when the user go to undefined path, you should display something on the screen. You can simply do that by using wildcard character (*)
+```javascript
+app.get('*', (req, res) => {
+  res.send('My 404 page');
+});
+```
+
 ## Dependencies
 - postman-request - help node.js send HTTP request
 - express - create RESTful API and web server

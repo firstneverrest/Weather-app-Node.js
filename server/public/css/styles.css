@@ -5,5 +5,40 @@
 }
 
 body {
-  background-color: #ffd700;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #ffd700;
+  margin-right: 2rem;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.container {
+  margin: 2rem 3rem;
+}
+
+section {
+  border: 1px solid #fff;
+  padding: 1rem 1.2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-style: italic;
 }

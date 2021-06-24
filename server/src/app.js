@@ -40,12 +40,22 @@ app.get('/help', (req, res) => {
   });
 });
 
-// app.get('/author', (req, res) => {
-//   res.send({
-//     name: 'First',
-//     age: 21,
-//   });
-// });
+app.get('/help/*', (req, res) => {
+  // res.send('Help article not found.');
+  res.render('404', {
+    title: '404',
+    name: 'Chitsanupong',
+    errorMessage: 'Help article not found.',
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Chitsanupong',
+    errorMessage: 'Page not found',
+  });
+});
 
 app.get('/weather', (req, res) => {
   res.send('Your weather');
