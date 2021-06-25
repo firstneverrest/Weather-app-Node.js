@@ -5,13 +5,12 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
 h1 {
+  color: #5e5e5e;
   margin-bottom: 1rem;
 }
 
@@ -21,20 +20,27 @@ header {
 
 a {
   text-decoration: none;
-  color: #ffd700;
+  color: #d63a92;
+  font-weight: 600;
   margin-right: 2rem;
 }
 
 a:hover {
-  color: #fff;
+  color: #000;
 }
 
 .container {
-  margin: 2rem 3rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  height: 90vh;
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 section {
-  border: 1px solid #fff;
+  border: 1px solid #d63a92;
   padding: 1rem 1.2rem;
 }
 

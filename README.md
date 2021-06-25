@@ -62,6 +62,12 @@ app.get('*', (req, res) => {
 });
 ```
 
+## Icon
+you can use `<link rel="icon" href="/img/weather.png">` to add icon in front of the title of your website
+
+## Query string
+Query string is a additional request from user to specify output that they want. For example, /products?rating=5&price=100. As a server, you can get the query string by referring to req.query.
+
 ## Dependencies
 - postman-request - help node.js send HTTP request
 - express - create RESTful API and web server
