@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About me',
     message:
-      'A web application for querying your weather. You can fill up your location such as province, post code, country and much more. Then, click search button to get result.',
+      'A web application for querying your weather. You can fill up your location such as province, post code, country and much more. Then, click search button to get result. This web app uses mapbox API and weatherstack API.',
     name: 'Chitsanupong Tangvasinkul',
   });
 });

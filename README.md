@@ -1,5 +1,15 @@
 # Weather application
 
+![image](server/public/img/weather-application-thumbnail.jpg)
+
+The weather application is a weather forecast web application using node.js application and express framework. It uses weather data from mapbox and weatherstack. After I had finished my project, I deployed up to Heroku which help deploying node.js and other backend application. You can find the weather of the location by fill up the search bar at the first page. Next, press enter or click search button. Then, the weather data of that location will appear in the box.
+
+### Technologies
+![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![image](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![image](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white)
+
 ## How does asynchronous works
 1. Call Stack - data structure provided by V8 JavaScript engine, use to keep track the execution of the program.
 2. Node APIs - when asynchronous function is used, it will come to this Node APIs and not block the other works.
@@ -79,6 +89,7 @@ Heroku is a platform as a service (PaaS) that enables developers to build, run, 
 7. `heroku create PROJECT_NAME`
 8. add `"start": "node server/src/app.js"` in package.json file
 9. change app.listen() on port 3000 in app.js to another one that compatible with Heroku
+10. `git push heroku master` to deploy up to Heroku repository
 
 ## Dependencies
 - postman-request - help node.js send HTTP request
