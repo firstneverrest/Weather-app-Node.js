@@ -74,6 +74,11 @@ Heroku is a platform as a service (PaaS) that enables developers to build, run, 
 2. install heroku CLI
 3. check heroku version by `heroku -v`
 4. use `heroku login` to enable cli
+5. setup Secure Shell (SSH) to securely share your code to third-party services.
+6. `heroku keys:add`
+7. `heroku create PROJECT_NAME`
+8. add `"start": "node server/src/app.js"` in package.json file
+9. change app.listen() on port 3000 in app.js to another one that compatible with Heroku
 
 ## Dependencies
 - postman-request - help node.js send HTTP request
