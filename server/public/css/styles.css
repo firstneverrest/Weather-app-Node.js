@@ -44,6 +44,32 @@ section {
   padding: 1rem 1.2rem;
 }
 
+.message {
+  margin-top: 2rem;
+  min-height: 15rem;
+}
+
+.search__form {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 3px 5px;
+  outline: 2px solid #ec1f94;
+}
+
+.search__button {
+  padding: 7.5px 10px;
+  background-color: #d63a92;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 footer {
   margin-top: 2rem;
   font-style: italic;

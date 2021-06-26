@@ -23,14 +23,16 @@ app.use(express.static(publicDirectoryPath));
 app.get('/', (req, res) => {
   res.render('index', {
     title: 'Weather Forecast',
-    name: 'Chitsanupong',
+    name: 'Chitsanupong Tangvasinkul',
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about', {
     title: 'About me',
-    name: 'Chitsanupong',
+    message:
+      'A web application for querying your weather. You can fill up your location such as province, post code, country and much more. Then, click search button to get result.',
+    name: 'Chitsanupong Tangvasinkul',
   });
 });
 
@@ -38,7 +40,7 @@ app.get('/help', (req, res) => {
   res.render('help', {
     title: 'Help',
     helpText: 'Weather Forecast',
-    name: 'Chitsanupong',
+    name: 'Chitsanupong Tangvasinkul',
   });
 });
 
@@ -83,7 +85,7 @@ app.get('/weather', (req, res) => {
 app.get('*', (req, res) => {
   res.render('404', {
     title: '404',
-    name: 'Chitsanupong',
+    name: 'Chitsanupong Tangvasinkul',
     errorMessage: 'Page not found',
   });
 });

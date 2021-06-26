@@ -68,6 +68,13 @@ you can use `<link rel="icon" href="/img/weather.png">` to add icon in front of 
 ## Query string
 Query string is a additional request from user to specify output that they want. For example, /products?rating=5&price=100. As a server, you can get the query string by referring to req.query.
 
+## Heroku 
+Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications in the cloud. In this project, we can use heroku to host our node.js application.
+1. sign up for heroku for free.
+2. install heroku CLI
+3. check heroku version by `heroku -v`
+4. use `heroku login` to enable cli
+
 ## Dependencies
 - postman-request - help node.js send HTTP request
 - express - create RESTful API and web server
@@ -77,3 +84,4 @@ Query string is a additional request from user to specify output that they want.
 ## Tools
 - weatherstack API
 - mapbox API
+- Heroku
